@@ -12,13 +12,13 @@ const App = () => {
   const updateCount = name => {
     console.log(name);
     if (name === 'good') {
-      setGood(good + 1);
+      setGood(prevGood => prevGood + 1);
       return;
     } else if (name === 'neutral') {
-      setNeutral(neutral + 1);
+      setNeutral(prevNeutral => prevNeutral + 1);
       return;
     } else if (name === 'bad') {
-      setBad(bad + 1);
+      setBad(prevBad => prevBad + 1);
       return;
     }
   };
@@ -26,7 +26,6 @@ const App = () => {
   const countTotalFeedback = () => {
     return good + neutral + bad;
   };
-  // () =>
 
   const countPositiveFeedbackPercentage = () => {
     return countTotalFeedback()
