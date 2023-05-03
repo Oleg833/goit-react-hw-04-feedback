@@ -10,7 +10,6 @@ const App = () => {
   const [bad, setBad] = useState(0);
 
   const updateCount = name => {
-    console.log(name);
     if (name === 'good') {
       setGood(prevGood => prevGood + 1);
       return;
